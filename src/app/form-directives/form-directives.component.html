@@ -1,0 +1,24 @@
+<section>
+  <form>
+    <div>
+      <h2>values</h2>
+      <p>name: {{item.name || 'not set'}}</p>
+      <p>age: {{item.age || 'not set'}}</p>
+    </div>
+
+    <div>
+      <h2>without directive</h2>
+      <p>you need to get the $value and create a helper func to get input value</p>
+      <input type="text" [value]="item.name" (input)="item.name=getValue($event)">
+    </div>
+    <div>
+      <h2>with ngModel directive</h2>
+      <p>
+        there is no need to set a helper function to get input value, but it's needed to 
+        import ngModelModule at app.module.ts. Futhermore, the input must have a name or even
+        be set as 'standalone'.
+      </p>
+      <input type="text" [(ngModel)]="item.name" [ngModelOptions]="{standalone: true}"/>
+    </div>
+  </form>
+</section>

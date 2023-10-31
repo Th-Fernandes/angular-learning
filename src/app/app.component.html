@@ -1,7 +1,25 @@
 <main>
-  hello world. You've clicked {{counter}} times!
+  <header class="app-header">
+    <h1>E-market</h1>
 
-  <app-increment-button></app-increment-button>
+    <ul>
+      <li>
+        <a routerLink="/">Home</a>
+      </li>
+      <li>
+        <a routerLink="">Products</a>
+      </li>
+      <li>
+        <a routerLink="">About us</a>
+      </li>
+      <li>
+        <a routerLink="/form-directives">form directives</a>
+      </li>
+
+    </ul>
+  </header>
+
+ <router-outlet></router-outlet>
  
 </main>
 

@@ -1,15 +1,27 @@
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #242424;
-  color: #f0f0f0;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  button {
-    background-color: aquamarine;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
+  background-color: #52FFB8;
+  color: #0f0f0f;
+
+  > ul {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none; 
+
+    > li {
+      > a {
+        text-decoration: none;
+      }
+    }
   }
 }
+
