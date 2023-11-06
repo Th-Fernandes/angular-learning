@@ -7,7 +7,7 @@
     </div>
 
     <div>
-      <h2>without directive</h2>
+      <h2 [ngClass]="item.name ? 'hasChars' : 'empty'">without directive</h2>
       <p>you need to get the $value and create a helper func to get input value</p>
       <input type="text" [value]="item.name" (input)="item.name=getValue($event)">
     </div>

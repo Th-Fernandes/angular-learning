@@ -6,20 +6,24 @@ import { AppComponent } from './app.component';
 import { IncrementButtonComponent } from './IncrementButton/incrementButton.component';
 import { FormDirectivesComponent } from './form-directives/form-directives.component';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilderComponent } from './form-builder/form-builder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IncrementButtonComponent,
-    FormDirectivesComponent  
+    FormDirectivesComponent,
+    FormBuilderComponent  
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: ' ', component: AppComponent },
-      { path: 'form-directives', component: FormDirectivesComponent }
+      { path: 'form-directives', component: FormDirectivesComponent },
+      { path: 'form-builder', component: FormBuilderComponent }
     ])
   ],
   providers: [],
